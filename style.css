@@ -1,0 +1,142 @@
+    /* Основной фон для приложения */
+    ion-app {
+        --background: #ffffff;
+      }
+  
+      /* Фон для ion-content */
+      ion-content {
+        --background: #ffffff;
+        --padding-top: 50px;
+      }
+  
+      /* Стили для кастомного меню */
+      .menu {
+        display: flex;
+        flex-direction: column;
+        padding: 16px;
+      }
+  
+      .menu-item {
+        display: flex;
+        align-items: center;
+        padding: 12px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        background-color: #f9f9f9; /* Светло-серый фон для контраста */
+        cursor: pointer;
+        text-decoration: none;
+        color: #333; /* Темный цвет текста для контраста */
+        position: relative;
+        transition: background-color 0.3s ease, color 0.3s ease; /* Добавить плавное изменение цвета */
+      }
+  
+      /* Стили при наведении */
+      .menu-item:hover,
+      .menu-item:focus {
+        background-color: #3880ff; /* Цвет фона при наведении */
+        color: #ffffff; /* Цвет текста при наведении */
+      }
+  
+      .menu-item:hover .arrow-icon,
+      .menu-item:focus .arrow-icon {
+        color: #ffffff; /* Белый цвет стрелочки при наведении */
+      }
+  
+      .menu-icon {
+        width: 28px;
+        height: 28px;
+        margin-right: 16px;
+        color: #333; /* Темный цвет иконок для контраста */
+        transition: color 0.3s ease; /* Плавное изменение цвета иконок */
+      }
+  
+      .menu-item:hover .menu-icon,
+      .menu-item:focus .menu-icon {
+        color: #ffffff; /* Белый цвет иконок при наведении */
+      }
+  
+      .menu-text {
+        font-size: 17px;
+        flex: 1;
+      }
+  
+      .arrow-icon {
+        width: 16px;
+        height: 16px;
+        color: #999; /* Цвет стрелочки по умолчанию */
+        position: absolute;
+        right: 16px;
+        font-size: 16px;
+      }
+  
+      /* Стили для иконок */
+      .list-item-icon {
+        width: 28px;
+        height: 28px;
+        margin-right: 18px;
+        color: #999; /* Цвет иконки по умолчанию */
+        font-size: 24px;
+      }
+  
+      /* Стилизация для элементов списка с иконками */
+      .list-item-content {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 16px;
+        position: relative;
+      }
+  
+      .list-item-content .text-container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+  
+      .list-item-content .text-container div {
+        font-size: 17px;
+        color: #000;
+      }
+  
+      .list-item-content .text-container .role {
+        font-size: 13px;
+        color: #999;
+      }
+  
+      /* Стили для заголовка над списком */
+      .menu-header {
+        font-size: 16px;
+        font-weight: 300;
+        color: #7d7d7d;
+        padding: 8px 8px 8px 32px;
+        margin: 0;
+        text-align: left;
+      }
+  
+      /* Стили для фона нижнего меню и отступов иконок */
+      ion-tab-bar {
+        --background: #ffffff; /* Белый фон для нижнего меню */
+        position: fixed;
+        bottom: 0; /* Обеспечивает, что меню будет прикреплено к нижней части экрана */
+        left: 0;
+        width: 100%; /* Обеспечивает, что меню занимает полную ширину экрана */
+        z-index: 1000; /* Обеспечивает, что меню будет поверх других элементов */
+        transform: translateY(-20px); /* Поднимает меню вверх на 20px */
+      }
+  
+      ion-tab-button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 6px; /* Отступ для иконок от нижней линии */
+      }
+  
+      ion-icon {
+        margin-top: 8px; /* Отступ от верхней линии иконок */
+        margin-bottom: 2px; /* Дополнительный отступ для иконок от нижней линии */
+      }
+  
+      ion-label {
+        margin-top: 4px; /* Отступ между иконкой и подписью (добавлено 2px относительно текущего отступа) */
+      }
